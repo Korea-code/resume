@@ -1,41 +1,69 @@
 import styled from 'styled-components';
-import Content from './content';
 
 const Container = styled.div`
-  height: 100px;
-  padding: 30px;
+  height: 100%;
+  width: 100px;
+  background-color: #1b1c1e;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 const Ul = styled.ul`
-  background-color: blue;
-  display: flex;
-  margin: 0 30px 0 auto;
   list-style: none;
-  font-size: 0.8em;
+  padding: 0;
 `;
 const Li = styled.li`
-  margin-right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #151515;
+  margin: 20px;
+  color: white;
+  font-size: 40px;
+  line-height: 55px;
+  text-align: center;
 `;
-const Logo = styled.p``;
+const Logo = styled.div`
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background-color: #09a56f;
+  margin: 10px;
+  color: white;
+  font-size: 60px;
+  line-height: 75px;
+  text-align: center;
+`;
+const DownloadBtn = styled.div`
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #151515;
+  margin: 20px;
+  color: white;
+  font-size: 40px;
+  line-height: 55px;
+  text-align: center;
+`;
 const Nav = () => {
   return (
     <Container>
-      <Logo>Jihyo Kim</Logo>
+      <Logo>J</Logo>
       <Ul>
         <Li>
-          <a>home</a>
+          <a>R</a>
         </Li>
         <Li>
-          <a>resume</a>
+          <a>P</a>
         </Li>
         <Li>
-          <a>works</a>
+          <a>S</a>
         </Li>
         <Li>
-          <a>Contact</a>
+          <a>C</a>
         </Li>
       </Ul>
+      <DownloadBtn>D</DownloadBtn>
     </Container>
   );
 };
