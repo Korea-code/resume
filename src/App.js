@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 import Header from './component/header';
-import Content from './component/Content';
-import Footer from './component/footer';
 
 // const Wrapper = styled.div`
 

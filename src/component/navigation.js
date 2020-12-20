@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 const Container = styled.div`
   height: 100%;
   width: 100px;
@@ -51,16 +51,16 @@ const Nav = () => {
       <Logo>J</Logo>
       <Ul>
         <Li>
-          <a>R</a>
+          <Link to="/">R</Link>
         </Li>
         <Li>
-          <a>P</a>
+          <Link to="/project">P</Link>
         </Li>
         <Li>
-          <a>S</a>
+          <Link to="/general">G</Link>
         </Li>
         <Li>
-          <a>C</a>
+          <Link to="/contact">C</Link>
         </Li>
       </Ul>
       <DownloadBtn>D</DownloadBtn>
