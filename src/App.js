@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-
+import styled, { ThemeProvider } from 'styled-components';
+import Theme from './styles/Theme';
+import GlobalStyles from './styles/GolobalStyles';
 import Header from './component/header';
 
 // const Wrapper = styled.div`
@@ -14,9 +15,12 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container>
-      <Header />
-    </Container>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyles />
+      <Container>
+        <Header />
+      </Container>
+    </ThemeProvider>
   );
 }
 
