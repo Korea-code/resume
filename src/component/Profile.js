@@ -3,13 +3,17 @@ import GithubLogo from '../icons/github-sign.svg';
 import LinkedInLogo from '../icons/linkedin.svg';
 import FaceBookLogo from '../icons/facebook-app-logo.svg';
 
+import Picture from '../images/profile2.PNG';
+
 const Container = styled.div`
   height: 110%;
   position: absolute;
   left: 100px;
   top: -5%;
   width: 500px;
-  background-image: url('https://images.unsplash.com/photo-1525373698358-041e3a460346?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+  background-image: url(${Picture});
+  background-size: cover;
+  background-position-x: center;
   box-shadow: 4px 4px 20px #111;
   display: flex;
   border-radius: 5px;

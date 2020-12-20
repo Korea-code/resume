@@ -10,7 +10,7 @@ const Line = styled.div`
     rgba(133, 133, 133, 1) 90%,
     rgba(29, 30, 32, 1) 100%
   );
-  margin: 80px 0;
+  margin: 60px 0;
 `;
 
 const Hr = () => {

@@ -33,7 +33,18 @@ const Contact = () => {
       </TextContainer>
 
       <Hr></Hr>
-      <H2></H2>
+      <TextContainer>
+        <Italic>Reference</Italic>
+        <br />
+        <P>
+          이 프로젝트는 Niko사의 포트폴리오 서비스를 참고하여 제작하였습니다.
+        </P>
+        <br />
+        <P>
+          Icons made by Smashicons, smalllikeart, DinosoftLabs, Freepik, Becris,
+          Dave Gandy from www.flaticon.com
+        </P>
+      </TextContainer>
     </>
   );
 };
