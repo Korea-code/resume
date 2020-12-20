@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Container = styled.div`
   height: 100%;
   width: 100px;
-  background-color: #1b1c1e;
+  background-color: ${(props) => props.theme.bgColor};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,7 +16,7 @@ const Li = styled.li`
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background-color: #151515;
+  background-color: ${(props) => props.theme.darkGreyColor};
   margin: 20px;
   color: white;
   font-size: 40px;
@@ -27,7 +27,7 @@ const Logo = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 50px;
-  background-color: #09a56f;
+  background-color: ${(props) => props.theme.darkGreenColor};
   margin: 10px;
   color: white;
   font-size: 60px;
@@ -38,7 +38,7 @@ const DownloadBtn = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background-color: #151515;
+  background-color: ${(props) => props.theme.darkGreyColor};
   margin: 20px;
   color: white;
   font-size: 40px;
