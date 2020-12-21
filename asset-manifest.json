@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/resume/static/js/main.dc811c35.chunk.js",
+    "main.js.map": "/resume/static/js/main.dc811c35.chunk.js.map",
+    "runtime-main.js": "/resume/static/js/runtime-main.9a70759e.js",
+    "runtime-main.js.map": "/resume/static/js/runtime-main.9a70759e.js.map",
+    "static/js/2.bd72c1be.chunk.js": "/resume/static/js/2.bd72c1be.chunk.js",
+    "static/js/2.bd72c1be.chunk.js.map": "/resume/static/js/2.bd72c1be.chunk.js.map",
+    "static/js/3.c1676d9a.chunk.js": "/resume/static/js/3.c1676d9a.chunk.js",
+    "static/js/3.c1676d9a.chunk.js.map": "/resume/static/js/3.c1676d9a.chunk.js.map",
+    "index.html": "/resume/index.html",
+    "static/js/2.bd72c1be.chunk.js.LICENSE.txt": "/resume/static/js/2.bd72c1be.chunk.js.LICENSE.txt",
+    "static/media/facebook-app-logo.529df4ce.svg": "/resume/static/media/facebook-app-logo.529df4ce.svg",
+    "static/media/github-sign.76189cbd.svg": "/resume/static/media/github-sign.76189cbd.svg",
+    "static/media/linkedin.bdd46eac.svg": "/resume/static/media/linkedin.bdd46eac.svg",
+    "static/media/profile2.f6a96db4.PNG": "/resume/static/media/profile2.f6a96db4.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a70759e.js",
+    "static/js/2.bd72c1be.chunk.js",
+    "static/js/main.dc811c35.chunk.js"
+  ]
+}
