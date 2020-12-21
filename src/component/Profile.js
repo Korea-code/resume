@@ -10,7 +10,7 @@ const Container = styled.div`
   position: absolute;
   left: 100px;
   top: -5%;
-  width: 500px;
+  width: ${(props) => props.size};
   background-image: url(${Picture});
   background-size: cover;
   background-position-x: center;
@@ -30,7 +30,7 @@ const Name = styled.div`
   align-items: center;
   & > .name {
     color: white;
-    font-size: 2.8em;
+    font-size: ${(props) => props.size};
     font-weight: 900;
   }
   & > .position {
@@ -59,10 +59,10 @@ const Icon = styled.img`
   width: 30px;
   height: 30px;
 `;
-const Profile = () => {
+const Profile = ({ screenType }) => {
   return (
-    <Container>
-      <Name>
+    <Container size={screenType === 'full' ? '500px' : '300px'}>
+      <Name size={screenType === 'full' ? '2.8em' : '2.5em'}>
         <p className="name">Jihyo Kim</p>
         <p className="position">Developer</p>
         <ul>

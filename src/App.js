@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from 'styled-components';
 import Theme from './styles/Theme';
 import GlobalStyles from './styles/GolobalStyles';
-import Header from './component/header';
+import Main from './component/Main';
 
 // const Wrapper = styled.div`
 
@@ -18,7 +18,7 @@ function App() {
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
       <Container>
-        <Header />
+        <Main />
       </Container>
     </ThemeProvider>
   );

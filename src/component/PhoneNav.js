@@ -10,52 +10,45 @@ import {
 } from './Icons';
 
 const Container = styled.div`
-  height: 100%;
-  width: 100px;
-  background-color: ${(props) => props.theme.bgColor};
+  width: 100%;
+  height: 60px;
+  background-color: ${(props) => props.theme.darkGreyColor};
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 `;
 const Ul = styled.ul`
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 `;
 const Li = styled.li`
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  background-color: ${(props) => props.theme.darkGreyColor};
+  width: 3%;
+  height: 20px;
   margin: 20px;
   color: white;
-  font-size: 40px;
-  line-height: 55px;
   text-align: center;
-  padding-top: 5px;
 `;
 const Logo = styled.div`
-  width: 80px;
-  height: 80px;
-  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   background-color: ${(props) => props.theme.darkGreenColor};
   margin: 10px;
   color: white;
-  font-size: 60px;
-  line-height: 75px;
+  font-size: 30px;
+  line-height: 41px;
   text-align: center;
 `;
 const DownloadBtn = styled.div`
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  background-color: ${(props) => props.theme.darkGreyColor};
+  height: 20px;
+  margin: 20px;
   margin: 20px;
   color: white;
-  font-size: 40px;
-  line-height: 55px;
   text-align: center;
 `;
-const Nav = () => {
+const PhoneNav = () => {
   const pathname = useLocation().pathname;
 
   return (
@@ -64,29 +57,29 @@ const Nav = () => {
       <Ul>
         <Li>
           <Link to="/">
-            <ResumeIcon active={pathname === '/'} size={35} />
+            <ResumeIcon active={pathname === '/'} size={25} />
           </Link>
         </Li>
         <Li>
           <Link to="/project">
-            <ProjectIcon active={pathname === '/project'} size={35} />
+            <ProjectIcon active={pathname === '/project'} size={25} />
           </Link>
         </Li>
         <Li>
           <Link to="/general">
-            <GeneralInfoIcon active={pathname === '/general'} size={35} />
+            <GeneralInfoIcon active={pathname === '/general'} size={25} />
           </Link>
         </Li>
         <Li>
           <Link to="/contact">
-            <ContactIcon active={pathname === '/contact'} size={35} />
+            <ContactIcon active={pathname === '/contact'} size={25} />
           </Link>
         </Li>
       </Ul>
       <DownloadBtn>
-        <DownloadIcon active={false} size={35} />
+        <DownloadIcon active={false} size={25} />
       </DownloadBtn>
     </Container>
   );
 };
-export default Nav;
+export default PhoneNav;

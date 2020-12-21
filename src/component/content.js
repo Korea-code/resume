@@ -8,10 +8,10 @@ import ScrollToTop from './ScrollToTop';
 const Container = styled.div`
   position: absolute;
   right: 0;
-  width: 685px;
-  height: 90%;
-  margin: 40px 20px;
-  padding: 0 20px;
+  width: ${(props) => (props.phone ? '90%' : '50%')};
+  height: ${(props) => (props.phone ? '85vh' : '90%')};
+  margin: ${(props) => (props.phone ? '20px 0 20px 20px' : '40px 20px')};
+  padding: ${(props) => (props.phone ? '0' : '0 20px')};
   overflow-y: scroll;
   scrollbar-width: 1px;
   &::-webkit-scrollbar {
@@ -28,9 +28,9 @@ const Container = styled.div`
   }
 `;
 
-const Content = () => {
+const Content = ({ screen }) => {
   return (
-    <Container id="content">
+    <Container id="content" phone={screen === 'phone'}>
       <ScrollToTop objectId="content" />
       <Switch>
         <Route exact path="/">

@@ -8,8 +8,11 @@ import TextContainer from '../component/TextContainer';
 
 const Box = styled.div`
   padding-left: 20px;
-  display: flex;
-  gap: 40px;
+  overflow: hidden;
+  & > div {
+    float: left;
+    margin-right: 20px;
+  }
 `;
 const Contact = () => {
   return (
