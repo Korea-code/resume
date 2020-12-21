@@ -17,7 +17,7 @@ const Box = styled.table`
 const General = () => {
   return (
     <>
-      <H1>General</H1> <br />
+      <H1>general info</H1> <br />
       <TextContainer>
         <H2>Technology</H2> <br />
         <Italic>Language</Italic>

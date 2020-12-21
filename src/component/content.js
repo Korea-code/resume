@@ -1,15 +1,16 @@
 import styled from 'styled-components';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../routes/Home';
 import Project from '../routes/Project';
 import General from '../routes/General';
 import Contact from '../routes/Contect';
+import ScrollToTop from './ScrollToTop';
 const Container = styled.div`
   position: absolute;
   right: 0;
   width: 685px;
   height: 90%;
-  margin: 70px 30px;
+  margin: 40px 20px;
   padding: 0 20px;
   overflow-y: scroll;
   scrollbar-width: 1px;
@@ -29,8 +30,12 @@ const Container = styled.div`
 
 const Content = () => {
   return (
-    <Container>
+    <Container id="content">
+      <ScrollToTop objectId="content" />
       <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
         <Route path="/project">
           <Project />
         </Route>
@@ -41,7 +46,7 @@ const Content = () => {
           <Contact />
         </Route>
         <Route path="/">
-          <Home />
+          <Redirect to="/" />
         </Route>
       </Switch>
     </Container>

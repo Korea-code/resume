@@ -1,5 +1,14 @@
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import {
+  GeneralInfoIcon,
+  ResumeIcon,
+  ProjectIcon,
+  ContactIcon,
+  DownloadIcon,
+} from './Icons';
+
 const Container = styled.div`
   height: 100%;
   width: 100px;
@@ -22,6 +31,7 @@ const Li = styled.li`
   font-size: 40px;
   line-height: 55px;
   text-align: center;
+  padding-top: 5px;
 `;
 const Logo = styled.div`
   width: 80px;
@@ -46,24 +56,36 @@ const DownloadBtn = styled.div`
   text-align: center;
 `;
 const Nav = () => {
+  const pathname = useLocation().pathname;
+
   return (
     <Container>
       <Logo>J</Logo>
       <Ul>
         <Li>
-          <Link to="/">R</Link>
+          <Link to="/">
+            <ResumeIcon active={pathname == '/'} size={35} />
+          </Link>
         </Li>
         <Li>
-          <Link to="/project">P</Link>
+          <Link to="/project">
+            <ProjectIcon active={pathname == '/project'} size={35} />
+          </Link>
         </Li>
         <Li>
-          <Link to="/general">G</Link>
+          <Link to="/general">
+            <GeneralInfoIcon active={pathname == '/general'} size={35} />
+          </Link>
         </Li>
         <Li>
-          <Link to="/contact">C</Link>
+          <Link to="/contact">
+            <ContactIcon active={pathname == '/contact'} size={35} />
+          </Link>
         </Li>
       </Ul>
-      <DownloadBtn>D</DownloadBtn>
+      <DownloadBtn>
+        <DownloadIcon active={false} size={35} />
+      </DownloadBtn>
     </Container>
   );
 };

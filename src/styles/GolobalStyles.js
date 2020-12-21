@@ -14,6 +14,7 @@ export default createGlobalStyle`
         background-color: ${(props) => props.theme.blackColor};
         color: ${(props) => props.theme.greyColor};
         font-family: 'Noto Sans KR', sans-serif;
+        min-height: 700px;
     }
     a {
         color: ${(props) => props.theme.darkGreenColor};

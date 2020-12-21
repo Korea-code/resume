@@ -4,7 +4,8 @@ import Nav from './navigation';
 import Content from './Content';
 const Head = styled.h1`
   background-color: #1d1e20;
-  height: 85vh;
+  height: 83vh;
+  min-height: 640px;
   display: flex;
   position: relative;
   border-radius: 5px;
