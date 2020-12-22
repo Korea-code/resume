@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import GithubLogo from '../icons/github-sign.svg';
-import LinkedInLogo from '../icons/linkedin.svg';
-import FaceBookLogo from '../icons/facebook-app-logo.svg';
 
+import { GithubIcon, LinkedInIcon, FacebookIcon } from './Icons';
 import Picture from '../images/profile2.PNG';
 
 const Container = styled.div`
@@ -68,18 +66,18 @@ const Profile = ({ screenType }) => {
         <ul>
           <li>
             <a href="https://github.com/Korea-code">
-              <Icon src={GithubLogo} />
+              <GithubIcon size="30" />
             </a>
           </li>
 
           <li>
             <a href="https://www.linkedin.com/in/jihyo-kim-b8b6ab1a0/">
-              <Icon src={LinkedInLogo} />
+              <LinkedInIcon size="30" />
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/rlawlgy93">
-              <Icon src={FaceBookLogo} />
+              <FacebookIcon size="30" />
             </a>
           </li>
         </ul>

@@ -170,7 +170,7 @@ export const GeneralInfoIcon = ({ active, size }) => (
     </g>
   </svg>
 );
-export const GithubtIcon = ({ size }) => (
+export const GithubIcon = ({ size }) => (
   <svg
     version="1.1"
     id="Capa_1"
