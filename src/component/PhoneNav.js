@@ -56,23 +56,26 @@ const PhoneNav = () => {
       <Logo>J</Logo>
       <Ul>
         <Li>
-          <Link to="/">
-            <ResumeIcon active={pathname === '/'} size={25} />
+          <Link to="/resume/">
+            <ResumeIcon active={pathname === '/resume/'} size={25} />
           </Link>
         </Li>
         <Li>
-          <Link to="/project">
-            <ProjectIcon active={pathname === '/project'} size={25} />
+          <Link to="/resume/project">
+            <ProjectIcon active={pathname === '/resume/project'} size={25} />
           </Link>
         </Li>
         <Li>
-          <Link to="/general">
-            <GeneralInfoIcon active={pathname === '/general'} size={25} />
+          <Link to="/resume/general">
+            <GeneralInfoIcon
+              active={pathname === '/resume/general'}
+              size={25}
+            />
           </Link>
         </Li>
         <Li>
-          <Link to="/contact">
-            <ContactIcon active={pathname === '/contact'} size={25} />
+          <Link to="/resume/contact">
+            <ContactIcon active={pathname === '/resume/contact'} size={25} />
           </Link>
         </Li>
       </Ul>

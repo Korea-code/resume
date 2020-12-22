@@ -63,23 +63,26 @@ const Nav = () => {
       <Logo>J</Logo>
       <Ul>
         <Li>
-          <Link to="/">
-            <ResumeIcon active={pathname === '/'} size={35} />
+          <Link to="/resume/">
+            <ResumeIcon active={pathname === '/resume/'} size={35} />
           </Link>
         </Li>
         <Li>
-          <Link to="/project">
-            <ProjectIcon active={pathname === '/project'} size={35} />
+          <Link to="/resume/project">
+            <ProjectIcon active={pathname === '/resume/project'} size={35} />
           </Link>
         </Li>
         <Li>
-          <Link to="/general">
-            <GeneralInfoIcon active={pathname === '/general'} size={35} />
+          <Link to="/resume/general">
+            <GeneralInfoIcon
+              active={pathname === '/resume/general'}
+              size={35}
+            />
           </Link>
         </Li>
         <Li>
-          <Link to="/contact">
-            <ContactIcon active={pathname === '/contact'} size={35} />
+          <Link to="/resume/contact">
+            <ContactIcon active={pathname === '/resume/contact'} size={35} />
           </Link>
         </Li>
       </Ul>

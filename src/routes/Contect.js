@@ -26,7 +26,7 @@ const Contact = () => {
         <Box>
           <div>
             <Italic>Phone</Italic>
-            <P>010 1234 1234</P>
+            <P>010 4795 2113</P>
           </div>
           <div>
             <Italic>Email</Italic>

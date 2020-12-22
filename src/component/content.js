@@ -33,20 +33,20 @@ const Content = ({ screen }) => {
     <Container id="content" phone={screen === 'phone'}>
       <ScrollToTop objectId="content" />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/resume/">
           <Home />
         </Route>
-        <Route path="/project">
+        <Route path="/resume/project">
           <Project />
         </Route>
-        <Route path="/general">
+        <Route path="/resume/general">
           <General />
         </Route>
-        <Route path="/contact">
+        <Route path="/resume/contact">
           <Contact />
         </Route>
-        <Route path="/">
-          <Redirect to="/" />
+        <Route path="/resume/">
+          <Redirect to="/resume/" />
         </Route>
       </Switch>
     </Container>
