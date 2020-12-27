@@ -43,7 +43,7 @@ const Name = styled.div`
     padding: 0;
     & > li {
       width: 28px;
-      height: 28px;
+      height: 27px;
       display: flex;
       justify-content: center;
       align-items: center;

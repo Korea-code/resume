@@ -81,9 +81,11 @@ const PhoneNav = () => {
           </Link>
         </Li>
       </Ul>
-      <DownloadBtn>
-        <DownloadIcon active={false} size={25} />
-      </DownloadBtn>
+      <a href="https://drive.google.com/file/d/1DPIPUhN81sDoGJNpel5-m_fGz4Wpc2o9/view?usp=sharing">
+        <DownloadBtn>
+          <DownloadIcon active={false} size={25} />
+        </DownloadBtn>
+      </a>
     </Container>
   );
 };
