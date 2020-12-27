@@ -12,6 +12,7 @@ const SMALL_SCREEN = 400;
 const Conatiner = styled.div`
   background-color: ${(props) => props.theme.bgColor};
   height: 83vh;
+  min-height: 671px;
   display: flex;
   position: relative;
   border-radius: 5px;
