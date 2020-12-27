@@ -25,6 +25,10 @@ const Project = () => {
           목적입니다.
         </P>
         <P>
+          - 재미적 요소를 추가하기 위해 평소 존경하는 개발자 Jongmin Kim자님의
+          프로젝트에 샤용된 물결효과를 프로필 사진에 넣어봤습니다.
+        </P>
+        <P>
           - <a href="/">Web</a>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <a href="https://github.com/Korea-code/resume">Github</a>

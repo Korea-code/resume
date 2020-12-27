@@ -8,7 +8,7 @@ import {
   ContactIcon,
   DownloadIcon,
 } from './Icons';
-
+import DevIcon from '../images/devIcon.png';
 const Container = styled.div`
   width: 100%;
   height: 60px;
@@ -33,8 +33,10 @@ const Li = styled.li`
 const Logo = styled.div`
   width: 40px;
   height: 40px;
-  border-radius: 20px;
-  background-color: ${(props) => props.theme.darkGreenColor};
+  border-radius: 10px;
+  background-color: ${(props) => props.theme.darkGreyColor};
+  background-image: url(${DevIcon});
+  background-size: contain;
   margin: 10px;
   color: white;
   font-size: 30px;

@@ -1,7 +1,9 @@
+import { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 
 import { GithubIcon, LinkedInIcon, FacebookIcon } from './Icons';
-import Picture from '../images/profile2.PNG';
+import imageFile from '../images/profile2.png';
+import Canvas from './Canvas/Canvas';
 
 const Container = styled.div`
   height: 110%;
@@ -9,19 +11,17 @@ const Container = styled.div`
   left: 100px;
   top: -5%;
   width: ${(props) => props.size};
-  background-image: url(${Picture});
-  background-size: cover;
-  background-position-x: center;
   box-shadow: 4px 4px 20px #111;
   display: flex;
   border-radius: 5px;
 `;
 
 const Name = styled.div`
+  position: absolute;
+  bottom: 50px;
   height: 160px;
   width: 80%;
-  align-self: flex-end;
-  margin: 90px 50px;
+  margin: 90px 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -58,8 +58,10 @@ const Icon = styled.img`
   height: 30px;
 `;
 const Profile = ({ screenType }) => {
+  useEffect(() => {});
   return (
     <Container size={screenType === 'full' ? '500px' : '300px'}>
+      <Canvas src={imageFile} />
       <Name size={screenType === 'full' ? '2.8em' : '2.5em'}>
         <p className="name">Jihyo Kim</p>
         <p className="position">Developer</p>

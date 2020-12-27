@@ -12,7 +12,6 @@ const SMALL_SCREEN = 400;
 const Conatiner = styled.div`
   background-color: ${(props) => props.theme.bgColor};
   height: 83vh;
-  min-height: 640px;
   display: flex;
   position: relative;
   border-radius: 5px;
@@ -20,7 +19,7 @@ const Conatiner = styled.div`
 const PhoneContainer = styled.div`
   background-color: ${(props) => props.theme.bgColor};
   height: 95vh;
-  min-height: 900px;
+  min-height: 600px;
   min-width: 350px;
   position: relative;
   border-radius: 5px;

@@ -40,7 +40,7 @@ const General = () => {
         <Box>
           <tr>
             <td>
-              <Italic>Computer Programmer</Italic>
+              <Italic>Computer Programming</Italic>
             </td>
             <td className="right">
               <P>2019 ~ 2020</P>

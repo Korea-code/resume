@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import DevIcon from '../images/devIcon.png';
 import {
   GeneralInfoIcon,
   ResumeIcon,
@@ -36,8 +37,10 @@ const Li = styled.li`
 const Logo = styled.div`
   width: 80px;
   height: 80px;
-  border-radius: 50px;
-  background-color: ${(props) => props.theme.darkGreenColor};
+  border-radius: 15px;
+  background-color: ${(props) => props.theme.darkGreyColor};
+  background-image: url(${DevIcon});
+  background-size: contain;
   margin: 10px;
   color: white;
   font-size: 60px;
@@ -60,7 +63,7 @@ const Nav = () => {
 
   return (
     <Container>
-      <Logo>J</Logo>
+      <Logo bgImage={DevIcon}></Logo>
       <Ul>
         <Li>
           <Link to="/resume/">

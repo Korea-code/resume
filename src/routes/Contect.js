@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import Hr from '../component/Hr';
 import H1 from '../component/H1';
-import H2 from '../component/H2';
 import P from '../component/P';
 import Italic from '../component/Italic';
 import TextContainer from '../component/TextContainer';
-
 const Box = styled.div`
   padding-left: 20px;
   overflow: hidden;
@@ -45,7 +43,6 @@ const Contact = () => {
         <br />
         <P>
           Icons made by Smashicons, smalllikeart, DinosoftLabs, Freepik, Becris,
-          Dave Gandy from www.flaticon.com
         </P>
       </TextContainer>
     </>
