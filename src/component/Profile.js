@@ -42,10 +42,11 @@ const Name = styled.div`
     width: 50%;
     padding: 0;
     & > li {
-      width: 30px;
-      height: 30px;
-      line-height: 1.3em;
-      font-size: 1.4em;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: white;
       border-radius: 10px;
       color: white;
