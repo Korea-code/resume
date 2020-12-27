@@ -223,7 +223,6 @@ export default ({ src }) => {
     image = new Image();
     image.src = src;
     image.onload = () => {
-      console.log('check');
       isLoaded = true;
       drawImage();
     };
