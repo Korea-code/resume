@@ -43,6 +43,7 @@ const Contact = () => {
         <br />
         <P>
           Icons made by Smashicons, smalllikeart, DinosoftLabs, Freepik, Becris,
+          Dave Gandy from www.flaticon.com.
         </P>
       </TextContainer>
     </>

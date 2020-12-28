@@ -20,7 +20,7 @@ const Conatiner = styled.div`
 const PhoneContainer = styled.div`
   background-color: ${(props) => props.theme.bgColor};
   height: 95vh;
-  min-height: 600px;
+  min-height: 500px;
   min-width: 350px;
   position: relative;
   border-radius: 5px;
