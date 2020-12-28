@@ -24,11 +24,12 @@ const Home = () => {
         <P>
           안녕하세요😃
           <br />
-          안녕하세요😃 캐나다의 Seneca college에서 Computer programming과를 곧
-          졸업하는 김지효" 입니다. Presence의 채용공고에서의 비전과 방향을 보고
-          제가 함께 일 할 수 있다면 정말 좋을 것 같아서 지원하게 되었습니다.
+          캐나다의 Seneca college에서 Computer programming과를 곧 졸업하는
+          김지효 입니다. Presence의 채용공고에서의 비전과 방향을 보고 제가 함께
+          일 할 수 있다면 정말 좋을 것 같아서 지원하게 되었습니다.
           <br />
-          왼쪽 사진을 클릭해보세요! 그리고 아래 버튼으로 Dot의 크기를 조절할 수
+          <br />
+          왼쪽 사진을 클릭해보세요! <br /> 아래 버튼으로 Dot의 크기를 조절할 수
           있습니다.
         </P>
       </TextContainer>
