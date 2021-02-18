@@ -58,7 +58,7 @@ const DownloadBtn = styled.div`
   line-height: 55px;
   text-align: center;
 `;
-const Nav = () => {
+const Nav = ({ company, resumeLink }) => {
   const pathname = useLocation().pathname;
 
   return (
@@ -66,34 +66,33 @@ const Nav = () => {
       <Logo bgImage={DevIcon}></Logo>
       <Ul>
         <Li>
-          <Link to="/resume/">
-            <ResumeIcon active={pathname === '/resume/'} size={35} />
+          <Link to={`/home?name=${company}`}>
+            <ResumeIcon active={pathname === '/home'} size={35} />
           </Link>
         </Li>
         <Li>
-          <Link to="/resume/project">
-            <ProjectIcon active={pathname === '/resume/project'} size={35} />
+          <Link to={`/project?name=${company}`}>
+            <ProjectIcon active={pathname === '/project'} size={35} />
           </Link>
         </Li>
         <Li>
-          <Link to="/resume/general">
-            <GeneralInfoIcon
-              active={pathname === '/resume/general'}
-              size={35}
-            />
+          <Link to={`/general?name=${company}`}>
+            <GeneralInfoIcon active={pathname === '/general'} size={35} />
           </Link>
         </Li>
         <Li>
-          <Link to="/resume/contact">
-            <ContactIcon active={pathname === '/resume/contact'} size={35} />
+          <Link to={`/contact?name=${company}`}>
+            <ContactIcon active={pathname === '/contact'} size={35} />
           </Link>
         </Li>
       </Ul>
-      <a href="https://drive.google.com/file/d/1DPIPUhN81sDoGJNpel5-m_fGz4Wpc2o9/view?usp=sharing">
-        <DownloadBtn>
-          <DownloadIcon active={false} size={35} />
-        </DownloadBtn>
-      </a>
+      {resumeLink && (
+        <a href={resumeLink}>
+          <DownloadBtn>
+            <DownloadIcon active={false} size={35} />
+          </DownloadBtn>
+        </a>
+      )}
     </Container>
   );
 };

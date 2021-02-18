@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import React, { useState, useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../routes/Home';
 import Project from '../routes/Project';
 import General from '../routes/General';
 import Contact from '../routes/Contact';
 import ScrollToTop from './ScrollToTop';
-import axios from 'axios';
 
 const Container = styled.div`
   position: absolute;
@@ -31,40 +29,27 @@ const Container = styled.div`
   }
 `;
 
-const Content = ({ screen }) => {
-  const [resume, setResume] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  useEffect(async () => {
-    const Resume = await axios.get(
-      'https://jihyo-resume-api.herokuapp.com/api/resume/Presence'
-    );
-    setResume(Resume.data);
-    setLoading(false);
-  });
+const Content = ({ screen, resume }) => {
   return (
     <Container id="content" phone={screen === 'phone'}>
       <ScrollToTop objectId="content" />
-      {isLoading ? (
-        '...'
-      ) : (
-        <Switch>
-          <Route exact path="/resume/">
-            <Home intro={resume.intro} />
-          </Route>
-          <Route path="/resume/project">
-            <Project projects={resume.projects} />
-          </Route>
-          <Route path="/resume/general">
-            <General />
-          </Route>
-          <Route path="/resume/contact">
-            <Contact contact={resume.contact} />
-          </Route>
-          <Route path="/resume/">
-            <Redirect to="/resume/" />
-          </Route>
-        </Switch>
-      )}
+      <Switch>
+        <Route exact path="/home">
+          <Home intro={resume.intro} />
+        </Route>
+        <Route path="/project">
+          <Project projects={resume.projects} />
+        </Route>
+        <Route path="/general">
+          <General />
+        </Route>
+        <Route path="/contact">
+          <Contact contact={resume.contact} />
+        </Route>
+        <Route path="/">
+          <Redirect to="/home" />
+        </Route>
+      </Switch>
     </Container>
   );
 };
