@@ -38,6 +38,7 @@ const Input = styled.input`
   background: ${(props) => (props.err ? 'rgba(191,63,63, 0.2)' : 'none')};
   color: ${(props) => props.theme.greyColor};
   width: 30%;
+  min-width: 250px;
   font-size: 2em;
   border-radius: 5px;
   text-align: center;
@@ -49,6 +50,7 @@ const Input = styled.input`
 `;
 const Btn = styled.button`
   width: 10%;
+  min-width: 150px;
   font-size: 1.3em;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.greyColor};
