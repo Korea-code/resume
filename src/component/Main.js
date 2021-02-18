@@ -10,7 +10,7 @@ import PhoneNav from './PhoneNav';
 import Content from './Content';
 
 const FULL_SCREEN = 1250;
-const MEDIUM_SCREEN = 820;
+const MEDIUM_SCREEN = 800;
 const SMALL_SCREEN = 400;
 
 const Conatiner = styled.div`
@@ -55,11 +55,16 @@ const Main = ({ location }) => {
         <Conatiner>
           {resume && <Nav company={company} resumeLink={resume.resumeLink} />}
           {!isFullScreen ? (
-            <Profile screenType="medium" />
+            <>
+              <Profile screenType="medium" />
+              {resume && <Content screen="medium" resume={resume} />}
+            </>
           ) : (
-            <Profile screenType="full" />
+            <>
+              <Profile screenType="full" />
+              {resume && <Content screen="full" resume={resume} />}
+            </>
           )}
-          {resume && <Content resume={resume} />}
         </Conatiner>
       ) : (
         <PhoneContainer>

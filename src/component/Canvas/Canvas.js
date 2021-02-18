@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 
 import styled, { keyframes } from 'styled-components';
 import { Ripple } from './ripple';
@@ -197,6 +197,7 @@ export default ({ src }) => {
     );
 
     ripple.start(e.offsetX, e.offsetY);
+    console.log('test');
   };
 
   function onMouseDown(e) {

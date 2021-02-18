@@ -11,7 +11,7 @@ const Container = styled.div`
       return css`
         position: relative;
         width: calc(100% - 40px);
-        height: 69vh;
+        height: 85vh;
         margin: 10px 0 50px 0;
       `;
     else

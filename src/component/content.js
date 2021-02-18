@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../routes/Home';
 import Project from '../routes/Project';
@@ -10,10 +10,30 @@ import ScrollToTop from './ScrollToTop';
 const Container = styled.div`
   position: absolute;
   right: 0;
-  width: ${(props) => (props.phone ? 'calc(100% - 40px)' : '50%')};
-  height: ${(props) => (props.phone ? 'calc(100vh - 80px)' : '90%')};
-  margin: ${(props) => (props.phone ? '20px 0 0 0' : '40px 20px')};
-  padding: ${(props) => (props.phone ? '0' : '0 20px')};
+  ${(props) => {
+    if (props.screen === 'phone')
+      return css`
+        width: calc(100% - 40px);
+        height: calc(100vh - 80px);
+        margin: 20px 0 0 0;
+        padding: 0;
+      `;
+    else if (props.screen === 'medium')
+      return css`
+        width: calc(100% - 450px);
+        height: 90%;
+        margin: 40px 20px;
+        padding: 0 20px;
+      `;
+    else
+      return css`
+        width: 50%;
+        height: 90%;
+        margin: 40px 20px;
+        padding: 0 20px;
+      `;
+  }};
+
   overflow-y: scroll;
   scrollbar-width: 1px;
   &::-webkit-scrollbar {
@@ -32,7 +52,7 @@ const Container = styled.div`
 
 const Content = ({ screen, resume }) => {
   return (
-    <Container id="content" phone={screen === 'phone'}>
+    <Container id="content" screen={screen}>
       <ScrollToTop objectId="content" />
       {screen === 'phone' && <Profile screenType="phone" />}
       <Switch>
