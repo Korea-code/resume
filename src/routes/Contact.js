@@ -12,23 +12,23 @@ const Box = styled.div`
     margin-right: 20px;
   }
 `;
-const Contact = () => {
+const Contact = ({ contact }) => {
   return (
     <>
       <H1>contact me</H1>
       <br />
       <TextContainer>
-        <P>저는 대한민국 부산광역시 해운대구에 거주하고있습니다.</P>
+        <P>{contact && contact.address}</P>
         <br />
         <br />
         <Box>
           <div>
             <Italic>Phone</Italic>
-            <P>010 4795 2113</P>
+            <P>{contact && contact.phone}</P>
           </div>
           <div>
             <Italic>Email</Italic>
-            <P>rlawlgy93@gmail.com</P>
+            <P>{contact && contact.email}</P>
           </div>
         </Box>
       </TextContainer>

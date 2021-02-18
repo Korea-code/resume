@@ -5,6 +5,7 @@ const Text = styled.div`
   font-weight: 600;
   color: white;
   margin: 0;
+  margin-bottom: 5px;
 `;
 
 const H1 = (props) => {
