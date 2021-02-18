@@ -87,7 +87,7 @@ const Nav = ({ company, resumeLink }) => {
         </Li>
       </Ul>
       {resumeLink && (
-        <a href={resumeLink}>
+        <a href={resumeLink} target="_blank">
           <DownloadBtn>
             <DownloadIcon active={false} size={35} />
           </DownloadBtn>

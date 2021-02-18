@@ -79,7 +79,7 @@ const PhoneNav = ({ company, resumeLink }) => {
         </Li>
       </Ul>
       {resumeLink && (
-        <a href={resumeLink}>
+        <a href={resumeLink} target="_blank">
           <DownloadBtn>
             <DownloadIcon active={false} size={25} />
           </DownloadBtn>

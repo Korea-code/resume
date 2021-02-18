@@ -18,7 +18,7 @@ const Home = ({ intro }) => {
     <>
       <H1>about me</H1>
       <Box>
-        <Italic>28 years</Italic> <P> / </P> <Italic>Korean</Italic>
+        <Italic>29 years</Italic> <P> / </P> <Italic>Korean</Italic>
         <P> / </P> <Italic>English</Italic>
       </Box>
       {intro.map((para, idx) => {

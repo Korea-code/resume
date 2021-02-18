@@ -6,7 +6,7 @@ import PhoneNav from './PhoneNav';
 import Content from './Content';
 
 const FULL_SCREEN = 1250;
-const MEDIUM_SCREEN = 800;
+const MEDIUM_SCREEN = 750;
 const SMALL_SCREEN = 400;
 
 const Conatiner = styled.div`
