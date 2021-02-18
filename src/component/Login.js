@@ -33,6 +33,15 @@ const Lock = styled.img`
       animation-fill-mode: forwards;
     `}
 `;
+
+const Form = styled.form`
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 const Input = styled.input`
   border: 1px solid ${(props) => props.theme.greyColor};
   background: ${(props) => (props.err ? 'rgba(191,63,63, 0.2)' : 'none')};
@@ -95,12 +104,14 @@ const Login = ({ onLogin, resume }) => {
     <Container animation={animation}>
       <Lock animation={animation} src={imageFile} />
       <P>암호를 입력해주세요</P>
-      <Input
-        err={err}
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <Btn onClick={submitHandler}>Log In</Btn>
+      <Form onSubmit={submitHandler}>
+        <Input
+          err={err}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <Btn type="submit">Log In</Btn>
+      </Form>
     </Container>
   );
 };
