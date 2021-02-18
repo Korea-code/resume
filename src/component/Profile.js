@@ -98,18 +98,21 @@ const Profile = ({ screenType }) => {
         <p className="position">Developer</p>
         <ul>
           <li>
-            <a href="https://github.com/Korea-code">
+            <a href="https://github.com/Korea-code" target="_blank">
               <GithubIcon size="30" />
             </a>
           </li>
 
           <li>
-            <a href="https://www.linkedin.com/in/jihyo-kim-b8b6ab1a0/">
+            <a
+              href="https://www.linkedin.com/in/jihyo-kim-b8b6ab1a0/"
+              target="_blank"
+            >
               <LinkedInIcon size="30" />
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/rlawlgy93">
+            <a href="https://www.facebook.com/rlawlgy93" target="_blank">
               <FacebookIcon size="30" />
             </a>
           </li>

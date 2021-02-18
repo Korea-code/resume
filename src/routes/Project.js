@@ -16,7 +16,7 @@ const Project = ({ projects }) => {
             <>
               {idx !== 0 && <Hr />}
               <TextContainer>
-                <a href={project.title.link}>
+                <a href={project.title.link} target="_blank">
                   <H2>{project.title.title}</H2>
                 </a>
                 <br />
@@ -37,7 +37,9 @@ const Project = ({ projects }) => {
                   {project.links &&
                     project.links.map((link) => (
                       <>
-                        <a href={link.URL}>{link.title}</a>
+                        <a href={link.URL} target="_blank">
+                          {link.title}
+                        </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                       </>
                     ))}

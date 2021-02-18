@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-import React, { useState, useEffect } from 'react';
-import { withRouter } from 'react-router';
-import axios from 'axios';
 import { useMediaQuery } from 'react-responsive';
-import queryString from 'query-string';
 import Profile from './Profile';
 import Nav from './navigation';
 import PhoneNav from './PhoneNav';
@@ -32,23 +28,13 @@ const PhoneContainer = styled.div`
   border-radius: 5px;
 `;
 
-const Main = ({ location }) => {
+const Main = ({ resume, company }) => {
   const isFullScreen = useMediaQuery({ minWidth: FULL_SCREEN });
   const isMediumScreen = useMediaQuery({ minWidth: MEDIUM_SCREEN });
   const isSmallScreen = useMediaQuery({
     query: `(min-width: ${SMALL_SCREEN}px)`,
   });
-  const [resume, setResume] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  const [company, setCompany] = useState(null);
-  useEffect(async () => {
-    const query = await queryString.parse(location.search);
-    setCompany(query.name);
-    const RESUME_URL = `https://jihyo-resume-api.herokuapp.com/api/resume/${company}`;
-    const Resume = await axios.get(RESUME_URL);
-    setResume(Resume.data);
-    setLoading(false);
-  }, [isLoading]);
+
   return (
     <>
       {isFullScreen || isMediumScreen ? (
@@ -77,4 +63,4 @@ const Main = ({ location }) => {
     </>
   );
 };
-export default withRouter(Main);
+export default Main;
