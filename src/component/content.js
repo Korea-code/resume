@@ -4,14 +4,15 @@ import Home from '../routes/Home';
 import Project from '../routes/Project';
 import General from '../routes/General';
 import Contact from '../routes/Contact';
+import Profile from './Profile';
 import ScrollToTop from './ScrollToTop';
 
 const Container = styled.div`
   position: absolute;
   right: 0;
-  width: ${(props) => (props.phone ? '90%' : '50%')};
-  height: ${(props) => (props.phone ? '85vh' : '90%')};
-  margin: ${(props) => (props.phone ? '20px 0 20px 20px' : '40px 20px')};
+  width: ${(props) => (props.phone ? 'calc(100% - 40px)' : '50%')};
+  height: ${(props) => (props.phone ? 'calc(100vh - 80px)' : '90%')};
+  margin: ${(props) => (props.phone ? '20px 0 0 0' : '40px 20px')};
   padding: ${(props) => (props.phone ? '0' : '0 20px')};
   overflow-y: scroll;
   scrollbar-width: 1px;
@@ -33,6 +34,7 @@ const Content = ({ screen, resume }) => {
   return (
     <Container id="content" phone={screen === 'phone'}>
       <ScrollToTop objectId="content" />
+      {screen === 'phone' && <Profile screenType="phone" />}
       <Switch>
         <Route exact path="/home">
           <Home intro={resume.intro} />

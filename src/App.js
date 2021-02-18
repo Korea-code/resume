@@ -10,7 +10,7 @@ import Main from './component/Main';
 // `;
 const Container = styled.div`
   max-width: 1350px;
-  margin: 4% auto;
+  margin: 0 auto;
 `;
 
 function App() {

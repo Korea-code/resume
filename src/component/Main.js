@@ -17,13 +17,15 @@ const Conatiner = styled.div`
   background-color: ${(props) => props.theme.bgColor};
   height: 83vh;
   min-height: 670px;
+  margin-top: 8vh;
   display: flex;
   position: relative;
   border-radius: 5px;
 `;
 const PhoneContainer = styled.div`
   background-color: ${(props) => props.theme.bgColor};
-  height: 95vh;
+  height: calc(100vh);
+  margin-bottom: 0;
   min-height: 600px;
   min-width: 350px;
   position: relative;

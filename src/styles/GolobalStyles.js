@@ -7,10 +7,10 @@ export default createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
     *{
         box-sizing:border-box;
-        
     }
     
     body {
+        margin: 0;
         background-color: ${(props) => props.theme.blackColor};
         color: ${(props) => props.theme.greyColor};
         font-family: 'Noto Sans KR', sans-serif;
