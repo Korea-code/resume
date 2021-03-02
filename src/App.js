@@ -7,7 +7,7 @@ import queryString from 'query-string';
 import axios from 'axios';
 import Main from './component/Main';
 import Login from './component/Login';
-
+import Loading from './component/Loading';
 const Container = styled.div`
   max-width: 1350px;
   margin: 0 auto;
@@ -34,9 +34,13 @@ function App({ location }) {
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
       <Container>
-        {isLoggedIn
-          ? resume && company && <Main resume={resume} company={company} />
-          : resume && <Login onLogin={handleLogIn} resume={resume} />}
+        {isLoading ? (
+          <Loading />
+        ) : isLoggedIn ? (
+          resume && company && <Main resume={resume} company={company} />
+        ) : (
+          resume && <Login onLogin={handleLogIn} resume={resume} />
+        )}
       </Container>
     </ThemeProvider>
   );

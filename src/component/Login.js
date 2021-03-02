@@ -91,7 +91,8 @@ const Login = ({ onLogin, resume }) => {
   const [err, setErr] = useState(false);
   // Lock moving animation
   const [animation, setAnimation] = useState(false);
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     if (btoa(input) === resume.password) {
       setAnimation(true);
       onLogin(true);
