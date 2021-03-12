@@ -230,7 +230,12 @@ export default ({ src }) => {
     requestRef.current = requestAnimationFrame(animate.bind(this));
     canvas.addEventListener('click', onclick.bind(this), false);
     canvas.addEventListener('drag', onMouseDown.bind(this), false);
-    return () => cancelAnimationFrame(requestRef.current);
+    return () => {
+      cancelAnimationFrame(requestRef.current);
+      window.removeEventListener('resize', resize.bind(this), false);
+      canvas.removeEventListener('click', onclick.bind(this), false);
+      canvas.removeEventListener('drag', onMouseDown.bind(this), false);
+    };
   });
 
   const onMinusClick = () => {
